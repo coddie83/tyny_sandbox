@@ -1,0 +1,13 @@
+TARGETNAME=minflt
+TARGETTYPE=DRIVER
+DRIVERTYPE=FS
+
+
+INCLUDES=$(INCLUDES);..\..\common;..\libsrc;
+
+TARGETLIBS= $(TARGETLIBS) \
+            $(IFSKIT_LIB_PATH)\fltMgr.lib \
+            $(IFSKIT_LIB_PATH)\ntoskrnl.lib
+
+SOURCES=miniflt.cpp   \
+        miniflt.rc
